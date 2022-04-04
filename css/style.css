@@ -164,10 +164,9 @@ a {
 	position: absolute;
 	top: 0;
 	z-index: 999;
-	background-color: #489657;
 }
 
-.menu-btn {
+.menu-btn{
 	width: 80px;
 	height: 80px;
 	background-color: #489657;
@@ -176,14 +175,22 @@ a {
 	position: fixed;
 	top: 0;
 	right: 0;
+	cursor: pointer;
+}
+
+.menu-btn:hover{
+	background-color: #30763D;
+}
+
+.menu-btn.active{
+	background-color: #30763D;
 }
 
 .menu-btn p{
 	font-size: 10px;
 	color: #fff;
-	margin: 0 auto;
-	margin: 18px;
 	font-weight: bold;
+	margin-top: 18px;
 }
 
 .menu li{
@@ -228,14 +235,24 @@ a {
 
 /* ハンバーガー */
 .menu-container{
-	position: absolute;
+	height: 100%;
+	background-color: #489657;
+
+}
+
+.menu-container.active{
+	opacity: 1;
+}
+
+.menu-inner{
+	position: relative;
 	top: 0;
 	z-index: 999;
-	width: 80%;
+	width: 70%;
 	height: 100%;
-	/* padding: 129px 0 0 233px; */
+	padding-top: 129px;
+	padding-left: 233px;
 	margin: 0 auto;
-	background-color: #489657;
 }
 
 .menu-container a {
@@ -243,17 +260,21 @@ a {
 	color: #fff;
 }
 
-.menu-list{
+.list-menu{
 	vertical-align: top;
 	display: inline-block;
-	padding-right: 182px;
+	padding-right: 192px;
 }
 
-.main-list{
+.list-main{
 	font-size: 24px;
 	padding-bottom: 45px;
 }
 
-.sub-list{
+.list-top{
+	padding-bottom: 77px;
+}
+
+.list-sub{
 	padding-bottom: 27px;
 }
