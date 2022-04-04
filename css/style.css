@@ -1,0 +1,259 @@
+@charset "utf-8";
+
+body {
+	font-size: 16px;
+	font-family: "游ゴシック";
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+.font2{
+	font-size: 28px;
+}
+
+/* mv */
+.mv {
+	width: 100%;
+	height: 1662px;
+	background-color: #FCFAF2;
+	padding-bottom: 211px;
+}
+
+/* header */
+.header-inner {
+	height: 80px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	z-index: 100;
+}
+
+.header-container{
+	height: 1133px;
+}
+
+.logo {
+	display: inline;
+	width: 180px;
+	height: 34.2px;
+	margin-top: 25px;
+	margin-left: 40px;
+}
+
+.logo img {
+	width: 100%;
+}
+
+.header-list nav ul {
+	display: flex;
+	margin-top: 35px;
+	margin-right: 120px;
+}
+
+.header-list nav ul li{
+	font-size: 14px;
+	font-weight: bold;
+	margin-right: 36px;
+	position: relative;
+}
+
+.header-list nav ul li::after{
+	content: "";
+	position: absolute;
+	z-index: -1;
+	left: 0;
+	top: 24px;
+	width: 0%;
+	height: 2px;
+	background-color: #489657;
+	transition: all 0.4s;
+}
+
+.header-list nav ul li:hover::after{
+	width: 100%;	
+}
+
+.top{
+	position: relative;
+	top: 0px;
+	z-index: 1;
+	height: 1080px;
+}
+
+.img-left {
+	width: 951px;
+	height: 941px;
+	position: absolute;
+	z-index: -1;
+	top: -80px;
+	right: 969px;
+	border-radius: 0 0 20px 0;
+}
+
+.img-copy{
+	width: 192px;
+	height: 559px;
+	position: absolute;
+	top: 232px;
+	right: 671px;
+	bottom: 870.1px;
+	left: 1057px;
+}
+
+.img-right{
+	width: 573px;
+	height: 779px;
+	object-fit: cover;
+	position: absolute;
+	top: 301px;
+	right: 0;
+}
+
+/* intro */
+.intro{
+	position: relative;
+	display: flex;
+	gap: 30px;
+	padding: 44px;
+}
+
+.intro-inner{
+	width: 864px;
+	margin-left: 355px;
+	position: relative;
+}
+
+.intro-img{
+	width: 471px;
+	height: 318px;
+	object-fit: contain;
+}
+
+.intro-ttl{
+	line-height: 44px;
+	padding-bottom: 29px;
+}
+
+.intro-ttl::after{
+	content: "";
+	display: block;
+	position: relative;
+	top: 29px;
+	width: 95px;
+	height: 3px;
+	background-color: #489657;
+}
+
+.intro-inner p{
+	line-height: 32px;
+	padding-top: 29px;
+}
+
+/* メニュータブ */
+.menu{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	z-index: 999;
+	background-color: #489657;
+}
+
+.menu-btn {
+	width: 80px;
+	height: 80px;
+	background-color: #489657;
+	color: #fff;
+	text-align: center;
+	position: fixed;
+	top: 0;
+	right: 0;
+}
+
+.menu-btn p{
+	font-size: 10px;
+	color: #fff;
+	margin: 0 auto;
+	margin: 18px;
+	font-weight: bold;
+}
+
+.menu li{
+	width: 36px;
+	background-color: #fff;
+	height: 2px;
+	border-radius: 5px
+}
+
+.menu li:nth-last-of-type(1){
+	position: absolute;
+	top: 40px;
+	right: 22px;
+}
+
+.menu li:nth-last-of-type(2){
+	position: absolute;
+	top: 50px;
+	right: 22px;
+}
+
+.menu li:nth-last-of-type(3){
+	position: absolute;
+	top: 60px;
+	right: 22px;
+}
+
+
+.contact p{
+	width: 80px;
+	height: 80px;
+	font-size: 10px;
+	font-weight: bold;
+	line-height: 80px;
+	background-color: #988635;
+	color: #fff;
+	text-align: center;
+	position: fixed;
+	top: 80px;
+	right: 0;
+}
+
+/* ハンバーガー */
+.menu-container{
+	position: absolute;
+	top: 0;
+	z-index: 999;
+	width: 80%;
+	height: 100%;
+	/* padding: 129px 0 0 233px; */
+	margin: 0 auto;
+	background-color: #489657;
+}
+
+.menu-container a {
+	display: block;
+	color: #fff;
+}
+
+.menu-list{
+	vertical-align: top;
+	display: inline-block;
+	padding-right: 182px;
+}
+
+.main-list{
+	font-size: 24px;
+	padding-bottom: 45px;
+}
+
+.sub-list{
+	padding-bottom: 27px;
+}
