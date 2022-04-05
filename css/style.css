@@ -33,7 +33,7 @@ a {
 	display: flex;
 	justify-content: space-between;
 	position: relative;
-	z-index: 100;
+	z-index: 50;
 }
 
 .header-container{
@@ -68,7 +68,6 @@ a {
 .header-list nav ul li::after{
 	content: "";
 	position: absolute;
-	z-index: -1;
 	left: 0;
 	top: 24px;
 	width: 0%;
@@ -84,7 +83,6 @@ a {
 .top{
 	position: relative;
 	top: 0px;
-	z-index: 1;
 	height: 1080px;
 }
 
@@ -92,7 +90,6 @@ a {
 	width: 951px;
 	height: 941px;
 	position: absolute;
-	z-index: -1;
 	top: -80px;
 	right: 969px;
 	border-radius: 0 0 20px 0;
@@ -115,6 +112,7 @@ a {
 	position: absolute;
 	top: 301px;
 	right: 0;
+	border-radius: 16px 0 0 16px;
 }
 
 /* intro */
@@ -163,7 +161,6 @@ a {
 	height: 100%;
 	position: absolute;
 	top: 0;
-	z-index: 999;
 }
 
 .menu-btn{
@@ -173,6 +170,7 @@ a {
 	color: #fff;
 	text-align: center;
 	position: fixed;
+	z-index: 150;
 	top: 0;
 	right: 0;
 	cursor: pointer;
@@ -204,6 +202,7 @@ a {
 	position: absolute;
 	top: 40px;
 	right: 22px;
+	transition: all 0.4s;
 }
 
 .menu li:nth-last-of-type(2){
@@ -216,38 +215,40 @@ a {
 	position: absolute;
 	top: 60px;
 	right: 22px;
-}
-
-
-.contact p{
-	width: 80px;
-	height: 80px;
-	font-size: 10px;
-	font-weight: bold;
-	line-height: 80px;
-	background-color: #988635;
-	color: #fff;
-	text-align: center;
-	position: fixed;
-	top: 80px;
-	right: 0;
+	transition: all 0.4s;
 }
 
 /* ハンバーガー */
 .menu-container{
 	height: 100%;
 	background-color: #489657;
+	position: fixed;
+	z-index: 100;
+	width: 100%;
+	opacity: 0;
+	pointer-events: none;
+}
 
+.menu .active li:nth-last-of-type(1){
+	transform: translateY(10px) rotate(-45deg);
+}
+
+.menu .active li:nth-last-of-type(2){
+	opacity: 0;
+}
+
+.menu .active li:nth-last-of-type(3){
+	transform: translateY(-10px) rotate(45deg);
 }
 
 .menu-container.active{
 	opacity: 1;
+	pointer-events: auto;
 }
 
 .menu-inner{
 	position: relative;
 	top: 0;
-	z-index: 999;
 	width: 70%;
 	height: 100%;
 	padding-top: 129px;
@@ -269,12 +270,43 @@ a {
 .list-main{
 	font-size: 24px;
 	padding-bottom: 45px;
+	cursor: unset;
 }
 
 .list-top{
 	padding-bottom: 77px;
+	cursor: unset;
 }
 
 .list-sub{
 	padding-bottom: 27px;
+	cursor: unset;
+}
+
+.contact p{
+	width: 80px;
+	height: 80px;
+	font-size: 10px;
+	font-weight: bold;
+	line-height: 80px;
+	background-color: #988635;
+	color: #fff;
+	text-align: center;
+	position: fixed;
+	top: 80px;
+	right: 0;
+}
+
+.contact p:hover{
+	background-color: #887625;
+}
+
+.list-main::before{
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+	height: 2px;
+	width: 17px;
+	margin-right: 15px;
+	background-color: #fff;
 }
